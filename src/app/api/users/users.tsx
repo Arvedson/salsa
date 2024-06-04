@@ -1,13 +1,11 @@
-// src/app/api/users/users.tsx
-
 import { NextApiRequest, NextApiResponse } from 'next';
-import dbConnect from '../../../lib/db/mongodb';
-import User from "../../../lib/db/models/User"
+import connectToDatabase from '../../../lib/db/mongodb';
+import User from "../../../lib/db/models/User";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
 
-  await dbConnect();
+  await connectToDatabase(); // Ya no necesitas pasar la URI aquí
 
   switch (method) {
     case 'GET':
