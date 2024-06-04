@@ -1,7 +1,6 @@
 import { Webhook } from 'svix';
 import { headers } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
-import User from "@/lib/db/models/User";
 import mongoose from 'mongoose';
 import { createUser } from "@/lib/services/user.service";
 
