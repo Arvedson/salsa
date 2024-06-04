@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectToDatabase from '../../../../lib/db/mongodb';
 import Ingrediente from '../../../../lib/db/models/Ingrediente';
 
+
 export async function POST(req: NextRequest) {
   try {
-    await connectToDatabase();
+    await connectToDatabase(uri: string); Promise<void>
 
     const { nombre, categoria, sabor, textura, solidos, agua, costo, compatibilidad, picor } = await req.json();
     
