@@ -57,7 +57,7 @@ const AgregarIngrediente = () => {
     console.log('Submitting ingredient:', ingrediente); 
     try {
       console.log('Sending fetch request'); 
-      const response = await fetch('https://salsa-q6r3xahlp-tomas-arvedsons-projects.vercel.app/api/ingredientes/postingrediente', {
+      const response = await fetch('https://salsa-9jichghnq-tomas-arvedsons-projects.vercel.app//api/ingredientes/postingrediente', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
