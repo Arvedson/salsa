@@ -6,9 +6,13 @@ if (!MONGODB_URI) {
   throw new Error('Por favor, añade tu URI de MongoDB a las variables de entorno');
 }
 
-async function connectToDatabase(uri: string): Promise<typeof mongoose> {
+async function connectToDatabase(): Promise<typeof mongoose> {
+  if (mongoose.connection.readyState >= 1) {
+    return mongoose;
+  }
+
   try {
-    await mongoose.connect(uri);
+    await mongoose.connect(MONGODB_URI);
     console.log('Conectado a MongoDB');
   } catch (error) {
     console.error('Error al conectar a MongoDB:', error);
