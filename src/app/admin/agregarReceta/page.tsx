@@ -87,7 +87,7 @@ const AgregarRecetaPage = () => {
       ingredientes,
     };
 
-    const response = await fetch('/api/receta/postrecetas', {
+    const response = await fetch('https://salsa-git-main-tomas-arvedsons-projects.vercel.app/api/receta/postrecetas', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
