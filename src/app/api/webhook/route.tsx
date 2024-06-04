@@ -50,7 +50,16 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   }
 
   // Extract name and email
-  const { first_name, last_name, email_addresses } = evt.data;
+  const { data } = evt;
+
+  // Ensure data is of the correct type before destructuring
+  if (!("first_name" in data && "last_name" in data && "email_addresses" in data)) {
+    return new NextResponse('Error occurred -- invalid data structure', {
+      status: 400,
+    });
+  }
+
+  const { first_name, last_name, email_addresses } = data;
   const email = email_addresses && email_addresses.length > 0 ? email_addresses[0].email_address : null;
 
   if (!email) {
