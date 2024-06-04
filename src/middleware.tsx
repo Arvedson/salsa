@@ -7,5 +7,6 @@ export const config = {
     '/((?!.*\\..*|_next).*)', // Match all routes except static files and _next directory
     '/',                      // Explicitly match the homepages
     '/(api|trpc)(.*)',        // Match API and trpc routes
+    "/api/webhook",
   ],
 };

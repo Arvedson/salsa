@@ -5,7 +5,7 @@ import User from "../../../lib/db/models/User";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { method } = req;
 
-  await connectToDatabase(); // Ya no necesitas pasar la URI aquí
+  await connectToDatabase(); // NO SE ESTA UTILIZANDO AUN
 
   switch (method) {
     case 'GET':
