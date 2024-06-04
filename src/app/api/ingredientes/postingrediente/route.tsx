@@ -11,7 +11,7 @@ if (!uri) {
 
 export async function POST(req: NextRequest) {
   try {
-    await connectToDatabase(uri!);
+    await connectToDatabase();
 
     const { nombre, categoria, sabor, textura, solidos, agua, costo, compatibilidad, picor } = await req.json();
     

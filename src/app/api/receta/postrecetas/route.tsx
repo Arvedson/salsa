@@ -11,7 +11,7 @@ if (!uri) {
 
 export async function POST(request: Request) {
   try {
-    await connectToDatabase(uri!);
+    await connectToDatabase();
     const body = await request.json();
     const newReceta = new Receta(body);
     await newReceta.save();
