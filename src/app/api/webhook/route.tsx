@@ -23,7 +23,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   const svix_signature = headerPayload.get("svix-signature");
 
   if (!svix_id || !svix_timestamp || !svix_signature) {
-    return new NextResponse('Error occurred -- no svix headers', {
+    return new NextResponse('Error occurreds -- no svix headers', {
       status: 400,
     });
   }
