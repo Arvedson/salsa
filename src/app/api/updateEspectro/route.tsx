@@ -1,7 +1,7 @@
 // pages/api/receta/updateespectro.ts
 
 import { NextApiRequest, NextApiResponse } from 'next';
-import actualizarEspectro from '../../../../lib/services/actualizarEspectro'; // Asegúrate de que la ruta sea correcta según tu estructura de archivos
+import actualizarEspectro from '../../../lib/services/actualizarEspectro'; // Asegúrate de que la ruta sea correcta según tu estructura de archivos
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // Puedes manejar diferentes métodos HTTP aquí si es necesario
