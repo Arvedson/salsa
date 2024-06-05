@@ -96,7 +96,7 @@ const AgregarRecetaPage = () => {
     });
   
     if (response.ok) {
-      const updateResponse = await fetch('https://salsa-git-main-tomas-arvedsons-projects.vercel.app/api/receta/updateespectro', {
+      const updateResponse = await fetch('https://salsa-git-main-tomas-arvedsons-projects.vercel.app/api/receta/updateEspectro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
