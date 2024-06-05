@@ -25,7 +25,7 @@ const AgregarIngrediente = () => {
   useEffect(() => {
     const fetchAllowedValues = async () => {
       try {
-        const response = await fetch('/api/ingredientes/allowed-values'); 
+        const response = await fetch('https://salsa-git-main-tomas-arvedsons-projects.vercel.app/api/ingredientes/allowed-values'); 
         if (!response.ok) {
           throw new Error('Error al obtener los valores permitidos');
         }
