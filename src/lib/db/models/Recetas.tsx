@@ -14,7 +14,9 @@ export interface IReceta extends Document {
   }[];
 }
 
-const allowedTipos = ['Salsa Roja', 'Salsa Verde', 'Salsa de Chiles', 'Salsa Cremosa', 'Salsa de Frutas'];
+
+
+const allowedTipos = ['Salsa Roja', 'Salsa Verde', 'Salsa de Chiles', 'Salsa Cremosa', 'Salsa de Frutas', "Salsa Regional", "Salsa Especial", "Salsa Popular" ];
 const allowedNivelDePicante = ['Suave', 'Medio', 'Picante'];
 const allowedUsos = ['Tacos', 'Mariscos', 'Carnes', 'Botanera'];
 const allowedTexturas = ['Líquida', 'Espesa', 'Chunky'];
@@ -28,6 +30,8 @@ const allowedCategorias = [
   'Aceites y Grasas',
   'Otros'
 ];
+
+
 
 const RecetaSchema: Schema = new Schema({
   nombre: { type: String, required: true },

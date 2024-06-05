@@ -94,9 +94,21 @@ const AgregarRecetaPage = () => {
       },
       body: JSON.stringify(nuevaReceta),
     });
-
+  
     if (response.ok) {
-      alert('Receta agregada exitosamente');
+      const updateResponse = await fetch('https://salsa-git-main-tomas-arvedsons-projects.vercel.app/api/receta/updateEspectro', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ingredientes, tipo: nuevaReceta.tipo }),
+      });
+  
+      if (updateResponse.ok) {
+        alert('Receta y espectros de ingredientes agregados exitosamente');
+      } else {
+        alert('Receta agregada, pero hubo un error al actualizar los espectros de los ingredientes');
+      }
     } else {
       alert('Hubo un error al agregar la receta');
     }
