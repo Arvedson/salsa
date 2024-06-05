@@ -2,7 +2,9 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import connectToDatabase from '../../../../lib/db/mongodb';
 import Ingrediente from '../../../../lib/db/models/Ingrediente';
 
-const actualizarEspectro = async (req: NextApiRequest, res: NextApiResponse) => {
+
+
+export default async function actualizarEspectro(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
       await connectToDatabase();
@@ -43,4 +45,3 @@ const actualizarEspectro = async (req: NextApiRequest, res: NextApiResponse) => 
   }
 };
 
-export default actualizarEspectro;
