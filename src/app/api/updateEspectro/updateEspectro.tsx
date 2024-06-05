@@ -1,5 +1,5 @@
 // pages/api/receta/updateespectro.ts
-
+"use server"
 import { NextApiRequest, NextApiResponse } from 'next';
 import actualizarEspectro from '../../../lib/services/actualizarEspectro'; // Asegúrate de que la ruta sea correcta según tu estructura de archivos
 
